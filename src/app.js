@@ -4,10 +4,12 @@ let calculationarea = document.querySelector('.calculationarea');
 let createbudgetbutton = document.querySelector('.createbudgetbutton');
 
 
-let expensebutton = document.querySelector('.addexpensebutton')
+let expensebutton = document.querySelector('.addexpensebutton');
+
+let remainingbudget = 0;
 
 createbudgetbutton.onclick = function() {
-    let userbudget = document.querySelector('#budgettextarea').value; // 2000
+    let userbudget = parseFloat(document.querySelector('#budgettextarea').value); // 2000
     let totalbudgettextnode = document.createTextNode("My Budget: " + userbudget); // My Budget: 2000
     let h2 = document.createElement('h2');
     h2.appendChild(totalbudgettextnode);
@@ -26,6 +28,7 @@ createbudgetbutton.onclick = function() {
         let pitem = document.createElement('p');
         pitem.appendChild(useritemtextnode);
         calculationarea.append(pitem);
+        return remainingbudget = remainingbudget - useritemprice;
     }
 }
 

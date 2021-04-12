@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -11,6 +12,14 @@
     grid-template-areas: 
         'b c'
         'e .';
+}
+
+@media screen and (max-width: 400px){
+    .container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .createbudget {
